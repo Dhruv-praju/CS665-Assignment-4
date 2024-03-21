@@ -7,7 +7,9 @@
 | Assignment 4 |                            |
 
 # Assignment Overview
-Please add a paragraph or two overviewing the objectives of the assignment.
+A company has two systems for accessing customer data. One is a newly developed system, while the other is an outdated legacy system. The legacy system retrieves customer data by connecting to external disks through a USB connection and accessing binary files. In contrast, the new system accesses customer data through a secure HTTPS connection and a REST API, connecting to an external server. Both systems have associated APIs that can be taken into consideration.
+
+Your task is to develop a software system that facilitates the integration of the old system's interface with the new system’s interface. In other words, you’ll need to be able to use the new system’s interface with the old system’s API.
 
 # GitHub Repository Link:
 https://github.com/Dhruv-praju/CS665-Assignment-4
