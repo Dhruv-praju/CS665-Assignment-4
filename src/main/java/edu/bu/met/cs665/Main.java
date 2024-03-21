@@ -8,7 +8,10 @@
 
 package edu.bu.met.cs665;
 
-import edu.bu.met.cs665.example1.Person;
+import edu.bu.met.cs665.example1.CustomerData_HTTPS;
+import edu.bu.met.cs665.example1.LegacySystem;
+import edu.bu.met.cs665.example1.NewSystem;
+import edu.bu.met.cs665.example1.adapter.LegacyCustomerDataAdaptor;
 
 /**
  * This is the Main class.
@@ -23,16 +26,21 @@ public class Main {
    */
   public static void main(String[] args) {
     System.out.println("This is a test message from the Main class (Main.java file)");
+
+    LegacySystem myOldSystem = new LegacySystem();
+    myOldSystem.getCustomer_USB(94);
+
+    NewSystem myNewSystem = new NewSystem();
+    myNewSystem.getCustomer_HTTPS(154);
+
+    LegacyCustomerDataAdaptor myOldSystemAdaptor = new LegacyCustomerDataAdaptor(myOldSystem);
+    test_HTTP_DataRetrival(myOldSystemAdaptor, 89);
+
   }
 
-  /**
-   * This method performs XYZ and returns String.
-   *
-   * @return String
-   */
-  private String doIt() {
-    Person student = new Person("John", "Doe");
-    return student.getLastName() + ',' + student.getFirstName();
-  }
-
+static void test_HTTP_DataRetrival(CustomerData_HTTPS httpData, int customerID){
+  httpData.getCustomer_HTTPS(customerID);
+  httpData.printCustomer(customerID);
+}
+  
 }
