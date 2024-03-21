@@ -22,11 +22,17 @@ For each assignment, please answer the following:
 
 - Explain the level of flexibility in your implementation, including how new object types can
 be easily added or removed in the future.
+    -   The implementation follows the Adapter pattern, which allows for flexibility in adding or removing object types in the future. If a new system or data retrieval mechanism needs to be added, you can create a new class that implements the CustomerData interface (e.g., NewSystemDataRetriever). This new class can then be adapted using the LegacyDataRetrieverAdapter or a new adapter class if necessary. 
+    -   Similarly, if an existing system or data retrieval mechanism needs to be removed, you can simply remove the corresponding implementation class without affecting the rest of the code.
 - Discuss the simplicity and understandability of your implementation, ensuring that it is
 easy for others to read and maintain.
+    -   The implementation is designed to be simple and easy to understand. Each class and interface has a clear purpose and follows a standard naming convention, making it easy for others to read and maintain the code.
+    -   Comments are provided where necessary to explain the functionality of classes and methods, further enhancing the understandability of the code.
 - Describe how you have avoided duplicated code and why it is important.
+    -   The implementation avoids duplicated code by using interfaces (CustomerData_HTTPS and CustomerData_USB) and adapter classes (NewSystemDataRetriever and LegacyDataRetrieverAdapter). This approach promotes code reuse and maintainability. If there is a need to change the implementation of a specific data retrieval mechanism, it can be done in the corresponding class without affecting the rest of the system
 - If applicable, mention any design patterns you have used and explain why they were
 chosen.
+    -   The Adapter Pattern. As it converts the Lecay System interface of a class into another New System interface that the client expects. Adapter lets classes (Lecay system & New System) work together that couldn't ohterwise because of incompatible interfaces.
 
 
 # Maven Commands
