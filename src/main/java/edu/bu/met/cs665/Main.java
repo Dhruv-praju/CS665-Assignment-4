@@ -9,9 +9,9 @@
 package edu.bu.met.cs665;
 
 import edu.bu.met.cs665.example1.CustomerData_HTTPS;
-import edu.bu.met.cs665.example1.LegacySystem;
-import edu.bu.met.cs665.example1.NewSystem;
+import edu.bu.met.cs665.example1.adaptee.LegacySystemDataRetriever;
 import edu.bu.met.cs665.example1.adapter.LegacyCustomerDataAdaptor;
+import edu.bu.met.cs665.example1.target.NewSystemDataRetriever;
 
 /**
  * This is the Main class.
@@ -27,10 +27,10 @@ public class Main {
   public static void main(String[] args) {
     System.out.println("This is a test message from the Main class (Main.java file)");
 
-    LegacySystem myOldSystem = new LegacySystem();
+    LegacySystemDataRetriever myOldSystem = new LegacySystemDataRetriever();
     myOldSystem.getCustomer_USB(94);
 
-    NewSystem myNewSystem = new NewSystem();
+    NewSystemDataRetriever myNewSystem = new NewSystemDataRetriever();
     myNewSystem.getCustomer_HTTPS(154);
 
     LegacyCustomerDataAdaptor myOldSystemAdaptor = new LegacyCustomerDataAdaptor(myOldSystem);

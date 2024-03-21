@@ -1,9 +1,11 @@
-package edu.bu.met.cs665.example1;
+package edu.bu.met.cs665.example1.adaptee;
 
-public class LegacySystem implements CustomerData_USB{
+import edu.bu.met.cs665.example1.CustomerData_USB;
+
+public class LegacySystemDataRetriever implements CustomerData_USB{
     @Override
     public void printCustomer(int customerID) {
-        System.out.println("The customer id is "+ customerID);
+        System.out.println("The customer id is "+ customerID+"\n");
     }
     @Override
     public void getCustomer_USB(int customerID) {

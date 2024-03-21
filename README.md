@@ -12,6 +12,9 @@ Please add a paragraph or two overviewing the objectives of the assignment.
 # GitHub Repository Link:
 https://github.com/Dhruv-praju/CS665-Assignment-4
 
+# Assumption
+Client only fetches data from new system interface by HTTP connection.
+
 # Implementation Description 
 
 
